@@ -7,8 +7,9 @@ import Popover from '../Popover'
 import noproduct from 'src/assets/images/no-product.png'
 import { formatCurrency } from 'src/utils/utils'
 import NavHeader from '../NavHeader'
-import useSearchProducts from 'src/hooks/useSearchProducts'
 import { purchasesStatus } from 'src/constants/purchase'
+import useSearchProducts from 'src/hooks/useSearchProducts'
+import purchaseApi from 'src/services/purchase.service'
 
 const MAX_PURCHASES = 5
 export default function Header() {

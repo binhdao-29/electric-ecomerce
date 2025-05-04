@@ -3,6 +3,7 @@ import { lazy, Suspense, useContext } from 'react'
 import { Navigate, Outlet, useRoutes } from 'react-router-dom'
 import path from 'src/constants/path'
 import { AppContext } from 'src/contexts/app.context'
+import CartLayout from 'src/layouts/CartLayout'
 import MainLayout from 'src/layouts/MainLayout'
 import RegisterLayout from 'src/layouts/RegisterLayout'
 import ProductList from 'src/pages/ProductList'
@@ -62,7 +63,9 @@ export default function useRouteElements() {
           path: path.cart,
           element: (
             <Suspense>
-              <Cart />
+              <CartLayout>
+                <Cart />
+              </CartLayout>
             </Suspense>
           )
         },
